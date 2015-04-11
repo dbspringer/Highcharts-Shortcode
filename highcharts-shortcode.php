@@ -17,7 +17,6 @@ class Highcharts_Shortcode {
 	 */
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
-		$this->chart_id = 0;
 	}
 
 	/**
@@ -120,7 +119,7 @@ class Highcharts_Shortcode {
 
 		$this->include_highcharts();
 		extract( shortcode_atts( array(
-			'container' => null,
+			'container' => '',
 			'style'     => ''
 		), $atts ) );
 
